@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\EntityFramework.6.3.0\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.3.0\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E1F957C9-8D43-49B8-95BF-116847745166}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>R5SALAO</RootNamespace>
+    <AssemblyName>R5SALAO</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.3.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.3.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.batteries_v2, Version=2.0.3.851, Culture=neutral, PublicKeyToken=8226ea5df37bcae9, processorArchitecture=MSIL">
+      <HintPath>packages\SQLitePCLRaw.bundle_green.2.0.3\lib\net461\SQLitePCLRaw.batteries_v2.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.core, Version=2.0.3.851, Culture=neutral, PublicKeyToken=1488e028ca7ab535, processorArchitecture=MSIL">
+      <HintPath>packages\SQLitePCLRaw.core.2.0.3\lib\netstandard2.0\SQLitePCLRaw.core.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.nativelibrary, Version=2.0.3.851, Culture=neutral, PublicKeyToken=502ed628492ab262, processorArchitecture=MSIL">
+      <HintPath>packages\SQLitePCLRaw.bundle_green.2.0.3\lib\net461\SQLitePCLRaw.nativelibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.provider.dynamic_cdecl, Version=2.0.3.851, Culture=neutral, PublicKeyToken=b68184102cba0b3b, processorArchitecture=MSIL">
+      <HintPath>packages\SQLitePCLRaw.provider.dynamic_cdecl.2.0.3\lib\netstandard2.0\SQLitePCLRaw.provider.dynamic_cdecl.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.113.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SQLite.Core.1.0.113.1\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.113.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SQLite.EF6.1.0.113.0\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.113.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SQLite.Linq.1.0.113.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DbDados.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbDados.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FormCupom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCupom.Designer.cs">
+      <DependentUpon>FormCupom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MVC\DAO\DAOSaida.cs" />
+    <Compile Include="MVC\DAO\DAOEntrada.cs" />
+    <Compile Include="MVC\DAO\DAOCliente.cs" />
+    <Compile Include="MVC\DAO\DAOConexao.cs" />
+    <Compile Include="MVC\DAO\DAOConnection.cs" />
+    <Compile Include="MVC\DAO\DAOAgendamento.cs" />
+    <Compile Include="MVC\DAO\DAOEstabelecimento.cs" />
+    <Compile Include="MVC\DAO\DAOProduto.cs" />
+    <Compile Include="MVC\DAO\DAORepresentante.cs" />
+    <Compile Include="MVC\DAO\DAOServico.cs" />
+    <Compile Include="MVC\DAO\DAOGRUPO.cs" />
+    <Compile Include="MVC\DAO\DAOTipo.cs" />
+    <Compile Include="MVC\DAO\DAOUser.cs" />
+    <Compile Include="MVC\DAO\DAOUsuario.cs" />
+    <Compile Include="MVC\DAO\DAOUtil.cs" />
+    <Compile Include="MVC\DAO\DAOVenda.cs" />
+    <Compile Include="MVC\Grid\GridCliente.cs" />
+    <Compile Include="MVC\Model\ModelEntrada.cs" />
+    <Compile Include="MVC\Model\ModelGrupo.cs" />
+    <Compile Include="MVC\Model\ModelRepresantante.cs" />
+    <Compile Include="MVC\Model\ModelSaida.cs" />
+    <Compile Include="MVC\Model\ModelTipo.cs" />
+    <Compile Include="MVC\Model\ModelAgendamento.cs" />
+    <Compile Include="MVC\Model\ModelCliente.cs" />
+    <Compile Include="MVC\Model\ModelProduto.cs" />
+    <Compile Include="MVC\Model\ModelServico.cs" />
+    <Compile Include="MVC\Model\ModelUsuario.cs" />
+    <Compile Include="MVC\Model\ModelVenda.cs" />
+    <Compile Include="MVC\Util\Util.cs" />
+    <Compile Include="MVC\View\ViewCadastroCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVC\View\ViewCadastroCliente.Designer.cs">
+      <DependentUpon>ViewCadastroCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MVC\View\ViewCadastroRepresentante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVC\View\ViewCadastroRepresentante.Designer.cs">
+      <DependentUpon>ViewCadastroRepresentante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MVC\View\ViewCadastroProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVC\View\ViewCadastroProduto.Designer.cs">
+      <DependentUpon>ViewCadastroProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MVC\View\ViewCadastroUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVC\View\ViewCadastroUsuario.Designer.cs">
+      <DependentUpon>ViewCadastroUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MVC\View\ViewEntradaProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVC\View\ViewEntradaProduto.Designer.cs">
+      <DependentUpon>ViewEntradaProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MVC\View\ViewGrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVC\View\ViewGrupo.Designer.cs">
+      <DependentUpon>ViewGrupo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MVC\View\ViewLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVC\View\ViewLogin.Designer.cs">
+      <DependentUpon>ViewLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MVC\View\MDIPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVC\View\MDIPrincipal.Designer.cs">
+      <DependentUpon>MDIPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MVC\View\ViewMarcarHorario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVC\View\ViewMarcarHorario.Designer.cs">
+      <DependentUpon>ViewMarcarHorario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MVC\View\ViewPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVC\View\ViewPagamento.Designer.cs">
+      <DependentUpon>ViewPagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MVC\View\ViewPDFEntrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVC\View\ViewPDFEntrada.Designer.cs">
+      <DependentUpon>ViewPDFEntrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MVC\View\ViewPdv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVC\View\ViewPdv.Designer.cs">
+      <DependentUpon>ViewPdv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MVC\View\ViewPesquisa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVC\View\ViewPesquisa.Designer.cs">
+      <DependentUpon>ViewPesquisa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MVC\View\ViewSaidaProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVC\View\ViewSaidaProduto.Designer.cs">
+      <DependentUpon>ViewSaidaProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MVC\View\ViewServico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVC\View\ViewServico.Designer.cs">
+      <DependentUpon>ViewServico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MVC\View\ViewTipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVC\View\ViewTipo.Designer.cs">
+      <DependentUpon>ViewTipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MVC\View\ViewVendedoras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVC\View\ViewVendedoras.Designer.cs">
+      <DependentUpon>ViewVendedoras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="Cupom.rdlc" />
+    <EmbeddedResource Include="FormCupom.resx">
+      <DependentUpon>FormCupom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVC\View\MDIPrincipal.resx">
+      <DependentUpon>MDIPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVC\View\ViewCadastroCliente.resx">
+      <DependentUpon>ViewCadastroCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVC\View\ViewCadastroRepresentante.resx">
+      <DependentUpon>ViewCadastroRepresentante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVC\View\ViewCadastroProduto.resx">
+      <DependentUpon>ViewCadastroProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVC\View\ViewCadastroUsuario.resx">
+      <DependentUpon>ViewCadastroUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVC\View\ViewEntradaProduto.resx">
+      <DependentUpon>ViewEntradaProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVC\View\ViewGrupo.resx">
+      <DependentUpon>ViewGrupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVC\View\ViewLogin.resx">
+      <DependentUpon>ViewLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVC\View\ViewMarcarHorario.resx">
+      <DependentUpon>ViewMarcarHorario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVC\View\ViewPagamento.resx">
+      <DependentUpon>ViewPagamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVC\View\ViewPDFEntrada.resx">
+      <DependentUpon>ViewPDFEntrada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVC\View\ViewPdv.resx">
+      <DependentUpon>ViewPdv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVC\View\ViewPesquisa.resx">
+      <DependentUpon>ViewPesquisa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVC\View\ViewSaidaProduto.resx">
+      <DependentUpon>ViewSaidaProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVC\View\ViewServico.resx">
+      <DependentUpon>ViewServico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVC\View\ViewTipo.resx">
+      <DependentUpon>ViewTipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVC\View\ViewVendedoras.resx">
+      <DependentUpon>ViewVendedoras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="DbDados.xsc">
+      <DependentUpon>DbDados.xsd</DependentUpon>
+    </None>
+    <None Include="DbDados.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbDados.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbDados.xss">
+      <DependentUpon>DbDados.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\R5SALAO.MVC.DAO.DAOUsuario.datasource" />
+    <None Include="Properties\DataSources\R5SALAO.MVC.DAO.DAOUtil.datasource" />
+    <None Include="Properties\DataSources\R5SALAO.MVC.DAO.DAOVenda.datasource" />
+    <None Include="Properties\DataSources\R5SALAO.MVC.Grid.GridCliente.datasource" />
+    <None Include="Properties\DataSources\R5SALAO.MVC.Model.ModelAgendamento.datasource" />
+    <None Include="Properties\DataSources\R5SALAO.MVC.Model.ModelCliente.datasource" />
+    <None Include="Properties\DataSources\R5SALAO.MVC.Model.ModelEntrada.datasource" />
+    <None Include="Properties\DataSources\R5SALAO.MVC.Model.ModelEntrada1.datasource" />
+    <None Include="Properties\DataSources\R5SALAO.MVC.Model.ModelEntrada2.datasource" />
+    <None Include="Properties\DataSources\R5SALAO.MVC.Model.ModelGrupo.datasource" />
+    <None Include="Properties\DataSources\R5SALAO.MVC.Model.ModelProduto.datasource" />
+    <None Include="Properties\DataSources\R5SALAO.MVC.Model.ModelRepresantante.datasource" />
+    <None Include="Properties\DataSources\R5SALAO.MVC.Model.ModelSaida.datasource" />
+    <None Include="Properties\DataSources\R5SALAO.MVC.Model.ModelServico.datasource" />
+    <None Include="Properties\DataSources\R5SALAO.MVC.Model.ModelTipo.datasource" />
+    <None Include="Properties\DataSources\R5SALAO.MVC.Model.ModelUsuario.datasource" />
+    <None Include="Properties\DataSources\R5SALAO.MVC.Model.ModelVenda.datasource" />
+    <None Include="Properties\DataSources\R5SALAO.MVC.Util.Util.datasource" />
+    <None Include="Properties\DataSources\R5SALAO.MVC.View.MDIPrincipal.datasource" />
+    <None Include="Properties\DataSources\R5SALAO.MVC.View.ViewCadastroCliente.datasource" />
+    <None Include="Properties\DataSources\R5SALAO.MVC.View.ViewCadastroProduto.datasource" />
+    <None Include="Properties\DataSources\R5SALAO.MVC.View.ViewCadastroRepresentante.datasource" />
+    <None Include="Properties\DataSources\R5SALAO.MVC.View.ViewCadastroUsuario.datasource" />
+    <None Include="Properties\DataSources\R5SALAO.MVC.View.ViewEntradaProduto.datasource" />
+    <None Include="Properties\DataSources\R5SALAO.MVC.View.ViewGrupo.datasource" />
+    <None Include="Properties\DataSources\R5SALAO.MVC.View.ViewMarcarHorario.datasource" />
+    <None Include="Properties\DataSources\R5SALAO.MVC.View.ViewPagamento.datasource" />
+    <None Include="Properties\DataSources\R5SALAO.MVC.View.ViewPdv.datasource" />
+    <None Include="Properties\DataSources\R5SALAO.MVC.View.ViewPesquisa.datasource" />
+    <None Include="Properties\DataSources\R5SALAO.MVC.View.ViewSaidaProduto.datasource" />
+    <None Include="Properties\DataSources\R5SALAO.MVC.View.ViewServico.datasource" />
+    <None Include="Properties\DataSources\R5SALAO.MVC.View.ViewTipo.datasource" />
+    <None Include="Properties\DataSources\R5SALAO.MVC.View.ViewVendedoras.datasource" />
+    <None Include="Properties\DataSources\R5SALAO.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\R5SALAO.Properties.Settings.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MVC\Img\" />
+    <Folder Include="MVC\Relatorio\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este projeto faz referência a pacotes do NuGet que não estão presentes neste computador. Use a Restauração de Pacotes do NuGet para baixá-los.  Para obter mais informações, consulte http://go.microsoft.com/fwlink/?LinkID=322105. O arquivo ausente é {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\EntityFramework.6.3.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.3.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.3.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.3.0\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('packages\SQLitePCLRaw.lib.e_sqlite3.2.0.3\build\net461\SQLitePCLRaw.lib.e_sqlite3.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\SQLitePCLRaw.lib.e_sqlite3.2.0.3\build\net461\SQLitePCLRaw.lib.e_sqlite3.targets'))" />
+    <Error Condition="!Exists('packages\System.Data.SQLite.Core.1.0.113.1\build\net46\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\System.Data.SQLite.Core.1.0.113.1\build\net46\System.Data.SQLite.Core.targets'))" />
+  </Target>
+  <Import Project="packages\EntityFramework.6.3.0\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.3.0\build\EntityFramework.targets')" />
+  <Import Project="packages\SQLitePCLRaw.lib.e_sqlite3.2.0.3\build\net461\SQLitePCLRaw.lib.e_sqlite3.targets" Condition="Exists('packages\SQLitePCLRaw.lib.e_sqlite3.2.0.3\build\net461\SQLitePCLRaw.lib.e_sqlite3.targets')" />
+  <Import Project="packages\System.Data.SQLite.Core.1.0.113.1\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('packages\System.Data.SQLite.Core.1.0.113.1\build\net46\System.Data.SQLite.Core.targets')" />
+</Project>
